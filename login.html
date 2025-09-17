@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Bit Busters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+      margin: 0;
+    }
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 320px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn-github {
+      background: #24292f;
+      color: white;
+    }
+    .btn-github:hover {
+      background: #333a42;
+    }
+    .btn-google {
+      background: white;
+      color: #444;
+      border: 1px solid #ddd;
+    }
+    .btn-google:hover {
+      background: #f8f8f8;
+    }
+    .btn img {
+      width: 20px;
+      height: 20px;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Welcome Back</h1>
+
+    <!-- GitHub Login Button -->
+    <button class="btn btn-github" onclick="loginWithGitHub()">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Logo">
+      Continue with GitHub
+    </button>
+
+    <!-- Google Login Button -->
+    <button class="btn btn-google" onclick="loginWithGoogle()">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_%22G%22_Logo.svg" alt="Google Logo">
+      Continue with Google
+    </button>
+
+    <p class="note">By logging in, you agree to our terms of service.</p>
+  </div>
+
+  <script>
+    function loginWithGitHub() {
+      window.location.href = "/auth/github";
+    }
+
+    function loginWithGoogle() {
+      window.location.href = "/auth/google";
+    }
+  </script>
+</body>
+</html>
